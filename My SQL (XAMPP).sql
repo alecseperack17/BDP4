@@ -5,7 +5,7 @@ CREATE TABLE `Departments` (
 `Reviews` char(12) NOT NULL, 
 `Employees` varchar(15) NOT NULL, 
 `Production` char(30) NOT NULL,
-CONSTRAINT PK_DepartmrntID	PRIMARY KEY (`DepartmentID`))
+CONSTRAINT PK_DepartmrntID	PRIMARY KEY (`DepartmentID`);
 
 CREATE TABLE `Locatioins` ( 
 `LocationtID` char(35) NOT NULL, 
@@ -14,7 +14,7 @@ CREATE TABLE `Locatioins` (
 `TireType` char(12) NOT NULL, 
 `Profit` char(15) NOT NULL, 
 `ProductionID` char(30) NOT NULL,
-CONSTRAINT FK_ProductID    FOREIGN KEY (`ProductID`)) REFERENCES Prodcuts(ProductID)
+CONSTRAINT FK_ProductID    FOREIGN KEY (`ProductID`)) REFERENCES Prodcuts(ProductID);
 
 
 CREATE TABLE `Products` ( 
@@ -23,4 +23,4 @@ CREATE TABLE `Products` (
 `Materials` char(15) NOT NULL, 
 `TireType` char(12) NOT NULL, 
 `Profit` char(15) NOT NULL, 
-CONSTRAINT FK_Profit	 FOREIGN KEY (`Profit`)) REFERENCES Treasury(Salary)
+CONSTRAINT FK_Profit	 FOREIGN KEY (`Profit`)) REFERENCES Treasury(Salary);
